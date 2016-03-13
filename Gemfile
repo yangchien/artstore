@@ -38,6 +38,8 @@ gem "carrierwave"
 gem "mini_magick"
 gem "font-awesome-rails"
 gem "awesome_rails_console"
+gem "aasm"
+
 
  group :production do
    gem "pg"
@@ -45,6 +47,9 @@ gem "awesome_rails_console"
  end
 
 group :development, :test do
+  group :development do
+  gem 'guard-livereload', '~> 2.5', require: false
+end
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
